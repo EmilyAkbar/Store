@@ -27,6 +27,10 @@ public class Item {
     void healthAffect() {
 
     }
+
+    void goodHealth() {
+
+    }
 }
 
 class Dairy extends Item {
@@ -35,6 +39,12 @@ class Dairy extends Item {
         super("Dairy", Name, price, 40, number);
         //TODO Auto-generated constructor stub
     } 
+
+    @Override
+    
+    void goodHealth() {
+        System.out.println("Health boost!");
+    }
     
 }
 
@@ -45,6 +55,11 @@ class Meat extends Item {
         //TODO Auto-generated constructor stub
     } 
     
+    @Override
+    
+    void goodHealth() {
+        System.out.println("Health boost!");
+    }
 }
 
 class Fruits extends Item {
@@ -53,6 +68,12 @@ class Fruits extends Item {
         super("Fruits", Name, price, 70, number);
         //TODO Auto-generated constructor stub
     } 
+
+    @Override
+    
+    void goodHealth() {
+        System.out.println("Health boost!");
+    }
     
 }
 
@@ -62,6 +83,12 @@ class Grains extends Item {
         super("Grains", Name, price, 30, number);
         //TODO Auto-generated constructor stub
     } 
+
+    @Override
+    
+    void goodHealth() {
+        System.out.println("Health boost!");
+    }
     
 }
 

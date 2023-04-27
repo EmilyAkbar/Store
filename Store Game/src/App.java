@@ -18,6 +18,7 @@ public class App {
             initialhealth = initialhealth + i.initialhealth;
             System.out.println("Your health level: " + initialhealth);
             i.healthAffect();
+            i.goodHealth();
 
             if (money < 0) {
                 System.out.println("You cannot afford anything else.");
