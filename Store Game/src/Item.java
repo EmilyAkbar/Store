@@ -4,13 +4,15 @@ public class Item {
     int price; 
     int initialhealth; 
     int number; 
+    String yummy; 
 
-    Item(String Category, String Name, int price, int initialhealth, int number){
+    Item(String Category, String Name, int price, int initialhealth, int number, String yummy){
         this.Category = Category; 
         this.Name = Name; 
         this.price = price; 
         this.initialhealth = initialhealth; 
         this.number = number; 
+        this.yummy = yummy; 
     
     }
 
@@ -28,21 +30,47 @@ public class Item {
 
     }
 
-    void goodHealth() {
+    void yummyNess() {
 
+    }
+
+
+
+}
+
+class Yummy extends Item {
+    Yummy(String Category, String Name, int price, int initialhealth, int number) {
+        super(Category, Name, price, initialhealth, number, "Yummy!");
+      
+    }
+    @Override
+    void yummyNess() {
+        System.out.println("Emily likes this!"); 
     }
 }
 
+class Meh extends Item {
+    Meh(String Category, String Name, int price, int initialhealth, int number) {
+        super(Category, Name, price, initialhealth, number, "Meh");
+    }
+    @Override
+    void yummyNess() {
+        System.out.println("Emily thinks this is ok..."); 
+    }
+}
+
+
+
 class Dairy extends Item {
 
-    Dairy(String Name, int price, int number) {
-        super("Dairy", Name, price, 40, number);
+    Dairy(String Name, int price, int number, String yummy) {
+        super("Dairy", Name, price, 40, number, yummy);
         //TODO Auto-generated constructor stub
     } 
 
     @Override
     
-    void goodHealth() {
+    void healthAffect() {
         System.out.println("Health boost!");
     }
     
@@ -50,28 +78,28 @@ class Dairy extends Item {
 
 class Meat extends Item {
 
-    Meat(String Name, int price, int number) {
-        super("Meat", Name, price, 50, number);
+    Meat(String Name, int price, int number, String yummy) {
+        super("Meat", Name, price, 50, number, yummy);
         //TODO Auto-generated constructor stub
     } 
     
     @Override
     
-    void goodHealth() {
+    void healthAffect() {
         System.out.println("Health boost!");
     }
 }
 
 class Fruits extends Item {
 
-    Fruits(String Name, int price, int number) {
-        super("Fruits", Name, price, 70, number);
+    Fruits(String Name, int price, int number, String yummy) {
+        super("Fruits", Name, price, 70, number, yummy);
         //TODO Auto-generated constructor stub
     } 
 
     @Override
     
-    void goodHealth() {
+    void healthAffect() {
         System.out.println("Health boost!");
     }
     
@@ -79,14 +107,14 @@ class Fruits extends Item {
 
 class Grains extends Item {
 
-    Grains(String Name, int price, int number) {
-        super("Grains", Name, price, 30, number);
+    Grains(String Name, int price, int number, String yummy) {
+        super("Grains", Name, price, 30, number, yummy);
         //TODO Auto-generated constructor stub
     } 
 
     @Override
     
-    void goodHealth() {
+    void healthAffect() {
         System.out.println("Health boost!");
     }
     
@@ -95,8 +123,8 @@ class Grains extends Item {
 
 class SugaryFood extends Item {
 
-    SugaryFood(String Name, int price, int number) {
-        super("Sugary Foods", Name, price, -20, number);
+    SugaryFood(String Name, int price, int number, String yummy) {
+        super("Sugary Foods", Name, price, -20, number, yummy);
         //TODO Auto-generated constructor stub
     }
 
@@ -111,8 +139,8 @@ class SugaryFood extends Item {
 
 class FrozenFood extends Item {
 
-    FrozenFood(String Name, int price, int number) {
-        super("Frozen Foods", Name, price, -10, number);
+    FrozenFood(String Name, int price, int number, String yummy) {
+        super("Frozen Foods", Name, price, -10, number, yummy);
         //TODO Auto-generated constructor stub
     } 
 
